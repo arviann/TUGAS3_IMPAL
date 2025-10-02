@@ -91,16 +91,16 @@ int main() {
     }
 
     if (is_sama_sisi) {
-        printf("🔺 Segitiga SAMA SISI. (EQUILATERAL)\n");
+        printf(" Segitiga SAMA SISI. (EQUILATERAL)\n");
     }
     else if (is_sama_kaki) {
-        printf("🔺 Segitiga SAMA KAKI. (ISOSCELES)\n");
+        printf(" Segitiga SAMA KAKI. (ISOSCELES)\n");
     }
     else if (is_siku_siku) {
-        printf("📐 Segitiga SIKU-SIKU. (RIGHT TRIANGLE)\n");
+        printf(" Segitiga SIKU-SIKU. (RIGHT TRIANGLE)\n");
     }
     else {
-        printf("🔺 Segitiga BEBAS.\n");
+        printf(" Segitiga BEBAS.\n");
     }
     
     garis();
