@@ -1,20 +1,37 @@
 #include <stdio.h>
 
 int main() {
-    int bilBulat;
-    float bilPecahan;
-    
-    printf("Masukkan bilangan bulat: ");
-    scanf("%d", &bilBulat);
+    int a, b, c;
 
-    bilPecahan = (float) bilBulat;
-    printf("Hasil typecasting int -> float: %.2f\n", bilPecahan);
+    printf("Masukkan 3 bilangan bulat (sisi segitiga): ");
+    scanf("%d %d %d", &a, &b, &c);
 
-    printf("\nMasukkan bilangan pecahan: ");
-    scanf("%f", &bilPecahan);
+    if (a <= 0 || b <= 0 || c <= 0) {
+        printf("Tidak ada segitiga dapat dibangun.\n");
+        return 0;
+    }
 
-    bilBulat = (int) bilPecahan;
-    printf("Hasil typecasting float -> int: %d\n", bilBulat);
+    int max = a;
+    if (b > max) max = b;
+    if (c > max) max = c;
+
+    int sum = a + b + c - max;
+
+    if (max >= sum) {
+        printf("Tidak ada segitiga dapat dibangun.\n");
+    }
+    else if (a == b && b == c) {
+        printf("Segitiga Sama Sisi (EQUILATERAL)\n");
+    }
+    else if (a == b || b == c || a == c) {
+        printf("Segitiga Sama Kaki (ISOSCELES)\n");
+    }
+    else if (max * max == (a * a + b * b + c * c - max * max)) {
+        printf("Segitiga Siku-Siku (RIGHT TRIANGLE)\n");
+    }
+    else {
+        printf("Segitiga Bebas (SCALENE)\n");
+    }
+
     return 0;
 }
-
