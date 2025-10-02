@@ -40,7 +40,7 @@ int main() {
     printf("\n");
 
     if (found && isValid) {
-        printf("✅ PRECONDITION 1 SUKSES: Akun valid.\n");
+        printf("PRECONDITION 1 SUKSES: Akun valid.\n");
         printf("=== INVOICE ===\n");
         printf("Account Number : %d\n", inputAcc);
         printf("Amount of Sale : Rp %.2f\n", amountOfSale);
@@ -48,7 +48,7 @@ int main() {
     } 
 
     else {
-        printf("❌ PRECONDITION 1 GAGAL. ");
+        printf("PRECONDITION 1 GAGAL. ");
         
         if (!found) {
             printf("Error: Nomor akun %d tidak ditemukan pada ACCOUNTS.\n", inputAcc);
