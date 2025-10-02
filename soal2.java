@@ -41,7 +41,7 @@ public class soal2 {
         }
 
         System.out.println("Total biaya servis: $" + totalBaseFee);
-
         input.close();
     }
 }
+
